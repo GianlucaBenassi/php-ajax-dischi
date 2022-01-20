@@ -5,3 +5,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ***** header ***** */
+
+header {
+    background-color: #2e3a46;
+    height: 70px;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+header img {
+    height: 100%;
+}
+
+/* ***** main ***** */
