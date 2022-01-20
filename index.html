@@ -19,11 +19,11 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="card">
-                        <img :src="disks[0].poster" alt="">
-                        <h2>{{disks[0].title}}</h2>
-                        <span>{{disks[0].author}}</span>
-                        <span>{{disks[0].year}}</span>
+                    <div class="card" v-for="(disk, index) in disks" :key="index">
+                        <img :src="disk.poster" :alt="disk.title">
+                        <h2>{{disk.title}}</h2>
+                        <span>{{disk.author}}</span>
+                        <span>{{disk.year}}</span>
                     </div>
 
                 </div>
