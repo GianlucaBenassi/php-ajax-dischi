@@ -12,11 +12,22 @@
     <div id="app">
 
         <header>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="spotify logo">
         </header>
 
         <main>
+            <div class="container">
+                <div class="row">
 
+                    <div class="card">
+                        <img :src="disks[0].poster" alt="">
+                        <h2>{{disks[0].title}}</h2>
+                        <span>{{disks[0].author}}</span>
+                        <span>{{disks[0].year}}</span>
+                    </div>
+
+                </div>
+            </div>
         </main>
     </div>
 

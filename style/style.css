@@ -6,6 +6,17 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 80%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* ***** header ***** */
 
 header {
@@ -22,3 +33,38 @@ header img {
 }
 
 /* ***** main ***** */
+
+main {
+    background-color: #1e2d3b;
+    min-height: calc(100vh - 70px);
+    padding-top: 150px;
+}
+
+main .row {
+    justify-content: center;
+}
+
+.card {
+    background-color: #2e3a46;
+    width: 240px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card span {
+    color: #868686;
+    text-align: center;
+    display: block;
+}
