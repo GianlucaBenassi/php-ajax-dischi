@@ -47,7 +47,7 @@ main {
 
 main .row {
     justify-content: center;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 main select {

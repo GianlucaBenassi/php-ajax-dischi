@@ -32,7 +32,11 @@
 
                 </div>
 
-                <div class="row">
+                <div class="row" v-if="loadText">
+                    <h2>Loading...</h2>
+                </div>
+
+                <div class="row" v-else>
 
                     <div class="card" v-for="(disk, index) in disks" :key="index">
                         <img :src="disk.poster" :alt="disk.title">

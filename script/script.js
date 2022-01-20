@@ -3,7 +3,8 @@ const app = new Vue({
     data: {
         disks: [],
         genres: [],
-        genreSelected: 'All'
+        genreSelected: 'All',
+        loadText: true
     },
     created() {
 
@@ -16,6 +17,7 @@ const app = new Vue({
             this.disks.forEach(elm => {
                 if (!this.genres.includes(elm.genre)) {
                     this.genres.push(elm.genre);
+                    this.loadText = false;
                 }
             });
 
@@ -24,12 +26,16 @@ const app = new Vue({
     },
     methods: {
         onChangeGenre() {
+
+            this.loadText = true;
+
             if (this.genreSelected == 'All') {
 
                 // get all disks
                 axios.get('http://localhost/20220120/php-ajax-dischi/backend.php')
                 .then((response) => {
                     this.disks = response.data;
+                    this.loadText = false;
                 });
 
             } else {
@@ -42,6 +48,7 @@ const app = new Vue({
                 })
                 .then((response) => {
                     this.disks = response.data;
+                    this.loadText = false;
                 });
 
             }
