@@ -21,6 +21,17 @@
 
         <main>
             <div class="container">
+
+                <div class="row">
+
+                    <label for="genres">Choose a genre:</label>
+                    <select name="genres" v-model="genreSelected">
+                        <option value="All" selected>All</option>
+                        <option v-for="(genre, index) in genres" :key="index" :value="genre">{{genre}}</option>
+                    </select>
+                    
+                </div>
+
                 <div class="row">
 
                     <div class="card" v-for="(disk, index) in disks" :key="index">

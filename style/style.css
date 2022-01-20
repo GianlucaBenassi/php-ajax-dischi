@@ -39,6 +39,7 @@ header img {
 /* ***** main ***** */
 
 main {
+    color: #fff;
     background-color: #1e2d3b;
     min-height: calc(100vh - 70px);
     padding-top: 150px;
@@ -46,6 +47,10 @@ main {
 
 main .row {
     justify-content: center;
+}
+
+main select {
+    margin-left: 10px;
 }
 
 .card {
