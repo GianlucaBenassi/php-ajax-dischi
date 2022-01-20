@@ -72,6 +72,15 @@
         ]
     ];
 
+    if (isset($_GET["genre"])) {
+        foreach ($database as $data) {
+            if (strtolower($data["genre"]) == strtolower($_GET["genre"])) {
+                $dataFiltered[] = [$data];
+            }
+        }
+        $database = $dataFiltered;
+    }
+
     header("Content-Type: application/json");
     echo json_encode($database);
 ?>
