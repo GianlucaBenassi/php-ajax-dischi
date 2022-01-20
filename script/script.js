@@ -21,5 +21,30 @@ const app = new Vue({
 
         });
 
+    },
+    methods: {
+        onChangeGenre() {
+            if (this.genreSelected == 'All') {
+
+                // get all disks
+                axios.get('http://localhost/20220120/php-ajax-dischi/backend.php')
+                .then((response) => {
+                    this.disks = response.data;
+                });
+
+            } else {
+                
+                // get filtered disks
+                axios.get('http://localhost/20220120/php-ajax-dischi/backend.php', {
+                    params: {
+                        genre: this.genreSelected
+                    }
+                })
+                .then((response) => {
+                    this.disks = response.data;
+                });
+
+            }
+        }
     }
 });

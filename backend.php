@@ -75,7 +75,7 @@
     if (isset($_GET["genre"])) {
         foreach ($database as $data) {
             if (strtolower($data["genre"]) == strtolower($_GET["genre"])) {
-                $dataFiltered[] = [$data];
+                $dataFiltered[] = $data;
             }
         }
         $database = $dataFiltered;

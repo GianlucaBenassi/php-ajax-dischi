@@ -25,11 +25,11 @@
                 <div class="row">
 
                     <label for="genres">Choose a genre:</label>
-                    <select name="genres" v-model="genreSelected">
+                    <select name="genres" v-model="genreSelected" @change="onChangeGenre()">
                         <option value="All" selected>All</option>
                         <option v-for="(genre, index) in genres" :key="index" :value="genre">{{genre}}</option>
                     </select>
-                    
+
                 </div>
 
                 <div class="row">
